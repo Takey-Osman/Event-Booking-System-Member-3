@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bookings & Sales - EventHub</title>
+
+    <link rel="stylesheet" href="../Asset/Organizer_Bookings.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+
+            <h2>Event<span>Hub</span></h2>
+
+            <a href="Organizer_Dashboard.html">Dashboard</a>
+
+            <a href="Create_Edit_Event.html">Create Event</a>
+
+            <a href="Organizer_Bookings.html">Bookings & Sales</a>
+
+            <a href="Organizer_Dashboard.html#events">My Events</a>
+
+        </div>
+
+
+        <!-- Main Content -->
+        <div class="main-content">
+
+            <h1>Bookings & Sales Summary</h1>
+
+            <p class="description">
+                View your booking records and event sales information.
+            </p>
+
+
+            <!-- Statistics Cards -->
+            <div class="stats">
+
+                <div class="card">
+                    <p>Total Bookings</p>
+                    <h2 id="totalBookings">0</h2>
+                </div>
+
+                <div class="card">
+                    <p>Tickets Sold</p>
+                    <h2 id="totalTickets">0</h2>
+                </div>
+
+                <div class="card">
+                    <p>Total Sales</p>
+                    <h2 id="totalSales">৳0</h2>
+                </div>
+
+                <div class="card">
+                    <p>Confirmed Bookings</p>
+                    <h2 id="confirmedBookings">0</h2>
+                </div>
+
+            </div>
+
+
+            <!-- Booking Details -->
+            <div class="table-section">
+
+                <h2>Booking Details</h2>
+
+                <p class="table-description">
+                    List of recent event bookings.
+                </p>
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Booking ID</th>
+                                <th>Attendee</th>
+                                <th>Event Name</th>
+                                <th>Seat Type</th>
+                                <th>Tickets</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="bookingTable">
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+            <!-- Sales Summary -->
+            <div class="table-section">
+
+                <h2>Event Sales Summary</h2>
+
+                <p class="table-description">
+                    Sales information for each event.
+                </p>
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Event Name</th>
+                                <th>Tickets Sold</th>
+                                <th>Total Revenue</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="salesTable">
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+            <footer>
+                <p>© 2026 EventHub. All Rights Reserved.</p>
+            </footer>
+
+        </div>
+
+    </div>
+
+
+    <script src="../Asset/Organizer_Bookings.js"></script>
+
+</body>
+</html>

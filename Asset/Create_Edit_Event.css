@@ -1,0 +1,280 @@
+
+/* =========================
+   1. Basic Setup
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f2f6;
+}
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   2. Sidebar
+========================= */
+
+.sidebar {
+    width: 160px;
+    background: #24446b;
+    padding: 20px 12px;
+    color: white;
+    flex-shrink: 0;
+}
+
+.sidebar h2 {
+    font-size: 21px;
+    margin-bottom: 35px;
+}
+
+/* EventHub Logo Color */
+.sidebar h2 span {
+    color: #b9d5ff;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 12px 8px;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.sidebar a:hover {
+    background: #365b85;
+}
+
+
+/* =========================
+   3. Main Content
+========================= */
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+    padding: 25px;
+}
+
+.main-content h1 {
+    color: #24446b;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.description {
+    color: #666;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   4. Form Container
+========================= */
+
+.form-container {
+    background: white;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #ddd;
+    max-width: 900px;
+}
+
+
+/* =========================
+   5. Form Elements
+========================= */
+
+form label {
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+form input:not([type="checkbox"]),
+form select,
+form textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 13px;
+    margin-bottom: 8px;
+    font-family: Arial, sans-serif;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #426b96;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.form-container h3 {
+    font-size: 16px;
+    color: #333;
+    margin: 12px 0 15px;
+}
+
+
+/* =========================
+   6. Seat Type Section
+========================= */
+
+.seat-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.seat-option {
+    display: grid;
+    grid-template-columns: 20px 100px 1fr 1fr;
+    align-items: center;
+    gap: 10px;
+    background: #f7f8fa;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.seat-option input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.seat-option label {
+    margin: 0;
+}
+
+
+/* =========================
+   7. Form Buttons
+========================= */
+
+.form-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.form-buttons button {
+    padding: 11px 22px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.create-btn {
+    background: #24446b;
+    color: white;
+}
+
+.create-btn:hover {
+    background: #365b85;
+}
+
+.reset-btn {
+    background: #ddd;
+    color: #333;
+}
+
+.reset-btn:hover {
+    background: #ccc;
+}
+
+
+/* =========================
+   8. Form Validation
+========================= */
+
+/* Error Message */
+
+.error {
+    display: block;
+    color: red;
+    font-size: 13px;
+    margin-top: 4px;
+    margin-bottom: 10px;
+}
+
+/* Error Border */
+
+.errorBorder {
+    border: 2px solid red !important;
+}
+
+/* Success Border */
+
+.successBorder {
+    border: 2px solid green !important;
+}
+
+/* Success Message */
+
+#result {
+    color: green;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+
+/* =========================
+   9. Responsive Design
+========================= */
+
+@media (max-width: 700px) {
+
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .seat-option {
+        grid-template-columns: 20px 1fr;
+    }
+
+    .seat-option input[type="number"] {
+        grid-column: 1 / -1;
+    }
+
+}

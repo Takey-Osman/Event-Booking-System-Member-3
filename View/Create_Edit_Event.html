@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Event - EventBook</title>
+
+    <link rel="stylesheet" href="../Asset/Create_Edit_Event.css">
+</head>
+<body>
+
+    <div class="dashboard">
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+
+            <h2>Event<span>Hub</span></h2>
+
+            <a href="Organizer_Dashboard.html">Dashboard</a>
+            <a href="Create_Edit_Event.html">Create Event</a>
+            <a href="Organizer_Bookings.html">Bookings & Sales</a>
+            <a href="Organizer_Dashboard.html#events">My Events</a>
+
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+
+            <h1>Create New Event</h1>
+
+            <p class="description">
+                Fill in the information below to create your event.
+            </p>
+
+            <div class="form-container">
+
+                <form id="eventForm" novalidate>
+
+                    <label for="eventName">Event Name</label>
+                    <input type="text" id="eventName"
+                        placeholder="Enter event name">
+                    <span class="error" id="eventNameError"></span>
+
+
+                    <label for="category">Event Category</label>
+                    <select id="category">
+                        <option value="">Select Category</option>
+                        <option value="Music">Music</option>
+                        <option value="Technology">Technology</option>
+                        <option value="Sports">Sports</option>
+                        <option value="Education">Education</option>
+                        <option value="Business">Business</option>
+                        <option value="Arts">Arts</option>
+                    </select>
+                    <span class="error" id="categoryError"></span>
+
+
+                    <label for="description">Event Description</label>
+                    <textarea id="description"
+                        placeholder="Write event details"
+                        rows="4"></textarea>
+                    <span class="error" id="descriptionError"></span>
+
+
+                    <div class="form-row">
+
+                        <div>
+                            <label for="eventDate">Event Date</label>
+                            <input type="date" id="eventDate">
+                            <span class="error" id="dateError"></span>
+                        </div>
+
+                        <div>
+                            <label for="eventTime">Event Time</label>
+                            <input type="time" id="eventTime">
+                            <span class="error" id="timeError"></span>
+                        </div>
+
+                    </div>
+
+
+                    <label for="venue">Select Venue</label>
+                    <select id="venue">
+                        <option value="">Choose a venue</option>
+                        <option value="BICC">Bangabandhu International Conference Center</option>
+                        <option value="Army Stadium">Army Stadium, Dhaka</option>
+                        <option value="Shilpakala Academy">Bangladesh Shilpakala Academy</option>
+                        <option value="DU Auditorium">Dhaka University Auditorium</option>
+                        <option value="Radisson Blu">Radisson Blu Dhaka</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <span class="error" id="venueError"></span>
+
+
+                    <h3>Seat Type & Ticket Price</h3>
+
+                    <span class="error" id="seatTypeError"></span>
+
+                    <div class="seat-section">
+
+                        <div class="seat-option">
+
+                            <input type="checkbox" id="regular" value="Regular">
+                            <label for="regular">Regular</label>
+
+                            <input type="number" id="regularPrice"
+                                placeholder="Price (৳)" min="0">
+
+                            <input type="number" id="regularSeats"
+                                placeholder="Available Seats" min="1">
+
+                        </div>
+
+                        <span class="error" id="regularError"></span>
+
+
+                        <div class="seat-option">
+
+                            <input type="checkbox" id="premium" value="Premium">
+                            <label for="premium">Premium</label>
+
+                            <input type="number" id="premiumPrice"
+                                placeholder="Price (৳)" min="0">
+
+                            <input type="number" id="premiumSeats"
+                                placeholder="Available Seats" min="1">
+
+                        </div>
+
+                        <span class="error" id="premiumError"></span>
+
+
+                        <div class="seat-option">
+
+                            <input type="checkbox" id="vip" value="VIP">
+                            <label for="vip">VIP</label>
+
+                            <input type="number" id="vipPrice"
+                                placeholder="Price (৳)" min="0">
+
+                            <input type="number" id="vipSeats"
+                                placeholder="Available Seats" min="1">
+
+                        </div>
+
+                        <span class="error" id="vipError"></span>
+
+                    </div>
+
+
+                    <div class="form-buttons">
+
+                        <button type="submit" class="create-btn">
+                            Create Event
+                        </button>
+
+                        <button type="reset" class="reset-btn">
+                            Reset
+                        </button>
+
+                    </div>
+
+                </form>
+
+                <p id="result"></p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="../Asset/Create_Edit_Event.js"></script>
+
+</body>
+</html>

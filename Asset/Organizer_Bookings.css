@@ -1,0 +1,219 @@
+
+/* Basic Setup */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f2f6;
+}
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* Sidebar */
+
+.sidebar {
+    width: 160px;
+    background: #24446b;
+    padding: 20px 12px;
+    color: white;
+    flex-shrink: 0;
+}
+
+.sidebar h2 {
+    font-size: 21px;
+    margin-bottom: 35px;
+}
+
+.sidebar h2 span {
+    color: #b9d5ff;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 12px 8px;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.sidebar a:hover {
+    background: #365b85;
+}
+
+
+/* Main Content */
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+    padding: 25px 20px;
+}
+
+.main-content h1 {
+    color: #24446b;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.description {
+    color: #666;
+    font-size: 13px;
+    margin-bottom: 22px;
+}
+
+
+/* Statistics Cards */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.card {
+    background: white;
+    padding: 18px 15px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px #ddd;
+}
+
+.card p {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.card h2 {
+    font-size: 21px;
+    color: #24446b;
+}
+
+
+/* Table Section */
+
+.table-section {
+    background: white;
+    padding: 20px;
+    margin-bottom: 22px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px #ddd;
+}
+
+.table-section h2 {
+    font-size: 19px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.table-description {
+    color: #777;
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+
+/* Table Design */
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 650px;
+}
+
+thead {
+    background: #edf1f5;
+}
+
+th {
+    text-align: left;
+    padding: 13px;
+    font-size: 12px;
+    color: #333;
+}
+
+td {
+    padding: 13px;
+    font-size: 13px;
+    color: #555;
+    border-bottom: 1px solid #eee;
+}
+
+tbody tr:hover {
+    background: #f8f9fb;
+}
+
+
+/* Booking Status */
+
+.status {
+    padding: 5px 9px;
+    border-radius: 3px;
+    font-size: 11px;
+}
+
+.confirmed {
+    background: #e3f1e6;
+    color: #26733c;
+}
+
+.pending {
+    background: #fff0d9;
+    color: #a66b19;
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 15px;
+    color: #888;
+    font-size: 12px;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 900px) {
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+}

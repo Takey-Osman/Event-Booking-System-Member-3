@@ -1,0 +1,159 @@
+
+/* =========================
+   1. Basic Setup
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f2f6;
+}
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   2. Sidebar
+========================= */
+
+.sidebar {
+    width: 160px;
+    background: #24446b;
+    padding: 20px 12px;
+    color: white;
+    flex-shrink: 0;
+}
+
+.sidebar h2 {
+    font-size: 21px;
+    margin-bottom: 35px;
+}
+
+/* EventHub Logo Color */
+
+.sidebar h2 span {
+    color: #b9d5ff;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 12px 8px;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.sidebar a:hover {
+    background: #365b85;
+}
+
+
+/* =========================
+   3. Main Content
+========================= */
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+    padding: 25px 20px;
+}
+
+.main-content h1 {
+    color: #24446b;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   4. Statistics Cards
+========================= */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.card {
+    background: white;
+    padding: 18px 15px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px #ddd;
+}
+
+.card p {
+    font-size: 13px;
+    color: #333;
+}
+
+.card strong {
+    color: #24446b;
+}
+
+
+/* =========================
+   5. Welcome Section
+========================= */
+
+.welcome {
+    margin-top: 25px;
+}
+
+.welcome h2 {
+    font-size: 19px;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.welcome p {
+    font-size: 13px;
+    color: #444;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   6. Responsive Design
+========================= */
+
+@media (max-width: 800px) {
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .sidebar h2 {
+        margin-bottom: 20px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+
+}
